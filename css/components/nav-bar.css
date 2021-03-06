@@ -1,0 +1,58 @@
+.nav {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #f9f9fa;
+  padding: 20px 50px;
+  border-top: solid 1px rgba(121, 121, 121, 0.2);
+}
+.nav__list {
+  display: flex;
+  justify-content: space-between;
+}
+.nav__link {
+  position: relative;
+  color: rgb(56, 56, 56);
+}
+
+@keyframes TurningNotification {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-5px) rotateY(358deg);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+.nav__notification {
+  position: absolute;
+  left: 11px;
+  bottom: 13px;
+  animation: TurningNotification 3s ease-in-out infinite;
+}
+.nav__point {
+  background-color: tomato;
+  display: flex;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  position: absolute;
+  left: 19px;
+  bottom: 20px;
+}
+
+@keyframes TransBtn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+  }
+}
+.nav__btn {
+  animation: TransBtn 2s ease-in-out;
+}
